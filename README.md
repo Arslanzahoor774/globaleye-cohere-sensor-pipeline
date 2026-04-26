@@ -58,6 +58,9 @@ RAW SENSOR DATA (Erieye AESA, IR, AIS, SIGINT)
 ```
 
 ---
+## Threat Assessment Dashboard
+
+![GlobalEye Threat Assessment](threat_dashboard.png)
 
 ## Sensors Modelled
 
