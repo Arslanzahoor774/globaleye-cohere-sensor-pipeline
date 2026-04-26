@@ -150,6 +150,33 @@ This pipeline directly addresses three of the MOU's stated collaboration areas:
 
 ---
 
+## On-Premises Deployment Consideration
+
+The Saab–Cohere MOU specifically highlights **on-premises integration
+into complex secure aerospace environments** as a core requirement.
+In the current proof-of-concept, the pipeline calls Cohere's cloud
+API for LLM inference. In a real GlobalEye deployment this would
+not be possible due to:
+
+- **Air-gapped networks** — military aircraft have no internet access
+- **Data classification** — sensor data cannot leave the secure environment
+- **Latency requirements** — cloud round-trips are too slow for real-time decisions
+
+### Production Deployment Architecture
+
+In production this pipeline would use **Cohere's Model Vault** —
+their dedicated on-premises inference platform that allows Command
+models to be deployed inside isolated, air-gapped environments with
+no data ever leaving the secure network.
+
+The data pipeline layers (Layers 1–3) in this project are already
+fully offline-capable. Only Layer 4 (LLM inference) would need to
+switch from the cloud API to a locally hosted Model Vault instance —
+requiring no changes to the pipeline architecture itself.
+
+This makes the solution production-ready for secure aerospace
+deployment with a single configuration change.
+
 ## Author
 
 **Muhammad Arslan Zahoor**
