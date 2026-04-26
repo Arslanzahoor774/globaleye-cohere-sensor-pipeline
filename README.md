@@ -1,3 +1,5 @@
+"Note: Sensor data in this project is simulated for demonstration purposes. In production this layer would connect directly to GlobalEye's Track Data Fusion Engine output."
+
 # GlobalEye Multi-Modal Sensor Data Bridge — Cohere LLM Integration
 
 > A proof-of-concept Data Science pipeline demonstrating how raw multi-modal aerospace sensor data from the **Saab GlobalEye AEW&C system** can be converted into structured natural language and fed into **Cohere's enterprise LLM** for real-time operator decision support.
